@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form peminjaman buku</title>
+<style>
+    body {font-family:arial, sans-serif; background:#eef3f8;padding:20px;}
+    .container {max-width:600px;margin:auto;background: #fff; padding:24px;border-radius:8px;}
+    fieldset{margin-bottom:20px;padding:14px;}
+    label{ display:block;margin:10px 0 4px;}
+    input[type="text"],input[type="date"],select,textarea{width:100%;padding:8px;}
+    .required {color:red;}
+    .checkbox-group label {display: block;margin:6px 0;}
+    </style>
+    </head>
+    <body>
+        <div class="container">
+
+    <h1>Form Registrasi Hobi</h1>
+
+    <form action="https://rplcoders.com/proses.php"method="post"enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Data Peminjam</legend>
+
+            <label for="nama">nama lengkap <span class="required">*</span></label>
+            <input required type="text" name="nama" id="nama"placeholder="ketikkan nama lengkap">
+
+            <label for="kelas">kelas</label>
+            <select name="kelas"id="kelas">
+                <option value="xrpl1"> X RPL 1</option>
+                <option value="xrpl2"> X RPL 2</option>
+                <option value="xtkj1"> x TKJ 1</option>
+                <option value="xtkj2"> X TKJ 2</option>
+                <option value="xtkj3"> X TKJ 3</option>
+                <option value="xkriya"> X KRIYA</option>
+                <option value="xdpib 1"> X DPIB 1 </option>
+                </select>
+                </fieldset>
+
+                <form
+                   action="https://rplcoders.com/proses.php"
+                   method="POST"
+                   enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Data buku</legend>
+
+                    <label for="judul">judul buku <span class="required">*</span></label>
+                    <input required type="text"name="judul"id="judul" placeholder="ketikkan judul buku">
+
+                    <label for="kategori">kategori</label>
+                    <select name="kategori"id="kategori">
+                        <option value="pelajaran">buku pelajaran</option>
+                        <option value="novel">novel</option>
+                        <option value="komputer">komputer</option>
+                        <option value="refrensi">refrensi</option>
+                        <option value="lainya">Lainnya</option>
+                        </select>
+
+                    <label for="jumlah">jumlah buku</label>
+                    <input type="number"name="jumlah" id="jumlah" min="1" max="3" value="1">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>waktu peminjaman</legend>
+
+                    <label for="tglpinjam">tanggal pinjam</label>
+                    <input required type="date"name="tglpinjam"id="tglpinjam">
+
+                    <label for="tglkembali">tanggal kembali</label>
+                    <input required type="date"name="tglkembali" id="tglkembali">
+
+                    <label>keperluan</label>
+                    <label><input type="radio" name="keperluan"value="belajar" checked>belajar</label>
+                    <label><input type="radio" name="keperluan"value="tugas"checked>mengerjakan tugas</label>
+                    <label><input type="radio"name="keperluan"value="bacaan hiburan"checked>bacaan hiburan</label>
+
+
+                    <label for="catatan">catatan</label>
+                    <textarea name="catatan" id="catatan"rows="3"></textarea>
+                    </fieldset>
+
+                    <div class="checkbox-group">
+                        <label>
+                            <input required type="checkbox"name="setuju"value="ya">
+                            saya berjanji mengembalikan buku tepat waktu dan menjaganya dengan baik.
+                            </label>
+                            </div>
+
+                            <button type="submit">pinjam</button>
+                            <button type="reset">reset</button>
+                    </form>
+                    </div>
+                    </body>
+                    <html>
+
